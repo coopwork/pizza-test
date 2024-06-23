@@ -1,4 +1,6 @@
 import { getRenderProducts, getPresentsList, sendDeliveryForm } from './api.js';
+import { createProductCards, createPresentsList } from './createDOM.js';
+import { fakePresents, fakeProducts } from './fakeData.js';
 import { interactiveDOM } from './interactiveUI.js';
 import { validation } from './validations.js';
 import '../assets/libs/glightbox/glightbox.min.js'
@@ -9,16 +11,22 @@ export const jsonPlaceholder = new Request('https://jsonplaceholder.typicode.com
 export const localData = new Request(`../assets/data`);
 
 document.addEventListener('DOMContentLoaded', async () => {
+  const parentsBlocks = {
+    presents: document.querySelector('[data-fetching="presents"]'),
+    products: document.querySelector('[data-fetching="products"]'),
+  }
 
   try {
     await getPresentsList(localData)
   } catch (error) {
     console.log('error from get presentation list', error);
+    createPresentsList({ parent: parentsBlocks.presents, presents: fakePresents })
   }
   try {
     await getRenderProducts(localData)
   } catch (error) {
     console.log('error from get products list', error);
+    createProductCards({ parent: parentsBlocks.products, products: fakeProducts })
   }
   try {
     await validation()
