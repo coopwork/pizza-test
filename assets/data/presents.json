@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Лучшее тесто",
+    "description": "Мы создаем тесто только из отборной итальянской муки наивысшего качества",
+    "icon": "./assets/images/icons/wheat.png"
+  },
+  {
+    "title": "Лучшие повара",
+    "description": "Пиццы готовят самые профессиональные итальянские повара",
+    "icon": "./assets/images/icons/cook.png"
+  },
+  {
+    "title": "Гарантия качества",
+    "description": "Наша пиццерия получила множество наград и признаний по всему миру",
+    "icon": "./assets/images/icons/quality.png"
+  },
+  {
+    "title": "Отборные рецепты",
+    "description": "Мы используем рецепты от мировых лидеров в изготовлении пиццы",
+    "icon": "./assets/images/icons/dish.png"
+  }
+]

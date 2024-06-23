@@ -1,0 +1,74 @@
+:root {
+  --main-color: 255, 175, 24;
+  --main-hover-color: 255, 200, 55;
+  --secondary-color: 185, 145, 80;
+  --accent-color: 56, 36, 0;
+  --shadow-color: 0, 0, 0;
+
+  --bg-color: 255, 255, 255;
+  --fg-color: 0, 0, 0;
+  --fg-color: 0, 0, 0;
+
+  --error-color: 175, 39, 39;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Muller;
+}
+
+body {
+  min-height: 100dvh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  font-size: 16px;
+  background-color: rgba(var(--bg-color), 1);
+  overflow-x: hidden;
+}
+
+body[aria-overlay="open"] {
+  overflow: hidden;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  color: rgba(var(--fg-color), 1);
+  background-color: rgba(var(--main-color), .5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

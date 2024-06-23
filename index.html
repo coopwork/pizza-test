@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./assets/styles/fonts.css">
+  <link rel="stylesheet" href="./assets/styles/index.css">
+  <link rel="stylesheet" href="./assets/styles/header.css">
+  <link rel="stylesheet" href="./assets/styles/components.css">
+  <link rel="stylesheet" href="./assets/styles/blocks.css">
+  <link rel="stylesheet" href="./assets/styles/useful.css">
+  <link rel="stylesheet" href="assets/libs/glightbox/glightbox.min.css">
+  <link rel="stylesheet" href="./assets/libs/wow/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <title>Pizza Cheff</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo.png" loading="lazy" alt="Pizza Cheff">
+        <h2>PIZZA <br /> CHEFF</h2>
+      </a>
+
+      <nav class="navigation">
+        <button class="btn close__burger__button">
+          &#x2716;
+        </button>
+        <a href="#" class="color-accent">Пиццы</a>
+        <a href="#" class="color-accent">Напитки</a>
+        <a href="#" class="color-accent">Доставка и оплата</a>
+        <a href="#" class="color-accent">Контакты</a>
+      </nav>
+
+      <aside class="burger__wrapper">
+        <div class="burger"></div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="hero__block block-separate">
+
+      <div class="hero__content animate__animated animate__fadeInLeft">
+        <h2 class="color-secondary">
+          Самая вкусная пицца в мире <br />
+          <span class="color-primary">только в Pizza Cheff</span>
+        </h2>
+
+        <div class="hero__presents" data-fetching="presents">
+          <!-- <div class="hero__present__item">
+            <img src="./assets/images/icons/wheat.png" loading="lazy" alt="">
+            <div class="hero__present__item__text">
+              <h5 class="color-primary uppercase">Лучшее тесто</h5>
+              <p class="color-secondary">
+                Мы создаем тесто только из
+                отборной итальянской муки
+                наивысшего качества
+              </p>
+            </div>
+          </div> -->
+        </div>
+
+        <button class="btn btn-primary btn-lg">
+          Выбрать пиццу
+        </button>
+      </div>
+
+      <div class="hero__image__wrapper animate__animated animate__fadeInRight">
+        <img loading="lazy" class="hero__image" src="./assets/images/placeholders/pizza_big.png"
+          alt="Самая вкусная пицца в мире только в Pizza Cheff">
+      </div>
+
+    </div>
+
+    <div class="block-separate wow slideInLeft animate__animated animate__fadeInUp" data-wow-duration="1s">
+      <h3 class="color-secondary text-center block__title">Выберите свою любимую пиццу</h3>
+      <section class="products__list" data-fetching="products">
+        <!-- <article class="card">
+        <div class="card__content">
+          <a class="glightbox" data-gallery="product" href="./assets/images/products/meat-delux.png">
+            <img class="card__image" src="./assets/images/products/meat-delux.png" alt="Мясная делюкс" loading="lazy">
+          </a>
+          <h5>
+            Мясная делюкс
+          </h5>
+          <p>
+            Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус чили, ананасы
+          </p>
+        </div>
+        <div class="card__footer w-full">
+          <button class="btn btn-primary w-full">
+            В корзину
+          </button>
+        </div>
+      </article> -->
+      </section>
+    </div>
+
+    <div class="delivery__block block-separate wow animate__animated animate__fadeInUp" data-wow-duration="1s">
+      <div class="delivery__text">
+        <h2 class="color-secondary">
+          <span class="color-primary">Хватит думать!</span> <br />
+          Доставим заказ за 30 минут!
+        </h2>
+        <p class="color-secondary">
+          Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа. Если мы опоздаем даже на 1
+          минуту
+          - вы получаете весь заказ бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим сервисом и
+          сделаем
+          всё, чтобы наш клиент был доволен и не остался голодный!
+        </p>
+      </div>
+
+      <form class="delivery__form">
+        <label class="input__wrapper">
+          <input required placeholder="Ваше имя" data-validate="dot in name, min length: 2" class="input-field  w-full"
+            type="text" id="name" name="name">
+        </label>
+        <label class="input__wrapper">
+          <input required placeholder="Адрес доставки" class="input-field  w-full" type="text" id="address"
+            name="address">
+        </label>
+        <label class="input__wrapper">
+          <input required placeholder="Телефон" data-validate="phone mask" class="input-field  w-full" type="tel"
+            id="phone" name="phone">
+        </label>
+        <ul class="form__errors"></ul>
+        <button class="btn btn-lg btn-primary w-full">
+          Оформить заказ
+        </button>
+      </form>
+
+      <img src="./assets/images/placeholders/pizzzzza.png" loading="lazy" alt="доставка пиццы">
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Pizza cheff &copy; 2024 all right reserved
+      </p>
+    </div>
+  </footer>
+
+
+  <div class="portal">
+    <div class="modal__window">
+      <div class="modal">
+        <div class="modal__header">
+          <button class="btn close__modal__button">
+            &#x2716;
+          </button>
+        </div>
+        <div class="modal__content"></div>
+        <div class="modal__footer"></div>
+      </div>
+    </div>
+
+    <div class="overlay">
+      <span class="overlay__colorful"></span>
+      <span class="overlay__blured"></span>
+    </div>
+  </div>
+
+  <script defer type="module" src="./src/main.js"></script>
+  <script src="./assets/libs/wow/wow.min.js"></script>
+  <script>
+    try {
+      const wow = new WOW();
+      wow.init();
+    } catch (error) {
+      console.error('WOW error', error);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+.btn {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  transition: background-color .33s;
+}
+
+.btn.btn-lg {
+  padding: 1.5rem 2.75rem;
+}
+
+.btn.btn-primary {
+  background-color: rgba(var(--main-color), 1);
+}
+
+.btn.btn-primary:hover {
+  background-color: rgba(var(--main-hover-color), 1);
+}
+
+.input-field {
+  position: relative;
+  padding: 1.25rem;
+  font-size: 1.15rem;
+  border: 1px solid rgba(var(--secondary-color), 1);
+}
+
+.input-field::placeholder {
+  color: rgba(var(--secondary-color), 1);
+  font-size: 1.15rem;
+}
+
+.input-field[data-error],
+.input-field[data-error]::placeholder {
+  border-color: rgba(var(--error-color), 1);
+  outline-color: rgba(var(--error-color), 1);
+  color: rgba(var(--error-color), 1);
+}
+
+label::after {
+  margin-top: .25rem;
+  content: attr(data-error);
+  display: block;
+  color: rgba(var(--error-color), 1);
+}
+
+.block__title {
+  margin-bottom: 3rem;
+}
+
+form .form__errors {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: rgba(var(--error-color), 1);
+  margin: -1rem 0;
+}
+
+.modal__window {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity .33s ease-in-out;
+}
+
+.modal__window[aria-opened='open'] {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+
+.modal__window .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 500px;
+  max-height: 400px;
+  background-color: rgba(var(--bg-color), 1);
+  z-index: 10;
+  box-shadow: 0 0 5rem .1rem rgba(var(--shadow-color), .1);
+  overflow-y: auto;
+}
+
+.modal__window .modal .modal__header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(var(--main-color), 1);
+  box-shadow: 0 0 5rem .1rem rgba(var(--shadow-color), .25);
+}
+
+.modal__window .modal .close__modal__button {
+  margin-left: auto;
+  font-size: 1.25rem;
+  padding: .5rem 1rem;
+}
+
+.modal__window .modal .modal__content {
+  padding: .5rem 1.5rem;
+}
+
+.modal__window .modal .modal__footer {
+  text-align: center;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+  background-color: rgba(var(--bg-color), 1);
+  box-shadow: 0 0 5rem .1rem rgba(var(--shadow-color), .1);
+}
+
+.modal__window .modal .modal__footer>* {
+  padding: .5rem 1.5rem;
+}

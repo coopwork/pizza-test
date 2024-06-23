@@ -1,0 +1,23 @@
+.w-full {
+  width: 100%;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.color-primary {
+  color: rgba(var(--main-color), 1);
+}
+
+.color-secondary {
+  color: rgba(var(--secondary-color), 1);
+}
+
+.color-accent {
+  color: rgba(var(--accent-color), 1);
+}
+
+.text-center {
+  text-align: center;
+}
