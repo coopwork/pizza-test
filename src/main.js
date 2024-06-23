@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   try {
-    createPresentsList({ parent: parentsBlocks.presents, presents: fakePresents }) // FAKE: can delete this
     await getPresentsList(localData)
+    createPresentsList({ parent: parentsBlocks.presents, presents: fakePresents }) // FAKE: can delete this
   } catch (error) {
     console.log('error from get presentation list', error);
   }
   try {
-    createProductCards({ parent: parentsBlocks.products, products: fakeProducts }) // FAKE: can delete this
     await getRenderProducts(localData)
+    createProductCards({ parent: parentsBlocks.products, products: fakeProducts }) // FAKE: can delete this
   } catch (error) {
     console.log('error from get products list', error);
   }
