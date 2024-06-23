@@ -11,22 +11,22 @@ export const jsonPlaceholder = new Request('https://jsonplaceholder.typicode.com
 export const localData = new Request(`../assets/data`);
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const parentsBlocks = {
+  const parentsBlocks = { // FAKE: can delete this
     presents: document.querySelector('[data-fetching="presents"]'),
     products: document.querySelector('[data-fetching="products"]'),
   }
 
   try {
+    createPresentsList({ parent: parentsBlocks.presents, presents: fakePresents }) // FAKE: can delete this
     await getPresentsList(localData)
   } catch (error) {
     console.log('error from get presentation list', error);
-    createPresentsList({ parent: parentsBlocks.presents, presents: fakePresents })
   }
   try {
+    createProductCards({ parent: parentsBlocks.products, products: fakeProducts }) // FAKE: can delete this
     await getRenderProducts(localData)
   } catch (error) {
     console.log('error from get products list', error);
-    createProductCards({ parent: parentsBlocks.products, products: fakeProducts })
   }
   try {
     await validation()

@@ -1,3 +1,5 @@
+// FAKE: can delete this
+
 export const fakePresents = [
   {
     "title": "Лучшее тесто",
